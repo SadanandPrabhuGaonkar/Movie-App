@@ -1,0 +1,456 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #1d1d1d;
+    --secondary-color: #000000;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.search1 {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    height: 50vh;
+    overflow: hidden;
+}
+
+.search1 h1 {
+    color: white;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.search {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    padding: 8px;
+    border-radius: 50px;
+    font-size: 1rem;
+    color: #fff;
+    font-family: inherit;
+}
+
+.search:focus {
+    outline: 0;
+    background-color: var(--primary-color);
+}
+
+.search::placeholder {
+    color: #7378c5;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: black;
+}
+
+main h1 {
+    color: #FFFFFF;
+}
+
+.overview {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    padding: 1rem;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+    transform: translateY(0)
+}
+
+.sort-content {
+    text-align: center;
+    color: white;
+}
+
+.sort-content h1 {
+    margin-top: 100px;
+    padding-bottom: 20px;
+}
+
+.sort-content a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    margin-right: 20px;
+    background-color: orange;
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px solid transparent;
+}
+
+.sort-content a:hover {
+    color: orange;
+    transition: 1s;
+    background-color: transparent;
+    border: 2px solid orange;
+}
+
+.movie {
+    width: 300px;
+    margin-top: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 3px;
+    box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+    margin-top: 0;
+}
+
+.movie-info span {
+    background-color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.movie-info span.green {
+    color: lightgreen;
+}
+
+.movie-info span.orange {
+    color: orange;
+}
+
+.movie-info span.red {
+    color: red;
+}
+
+.overview {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    padding: 1rem;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+    z-index: 2;
+}
+
+#form img {
+    width: 100px;
+}
+
+.bgimage {
+    background-image: url('tt.jpg');
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 3;
+}
+
+.menu {
+    width: 100%;
+    height: 100px;
+    position: sticky;
+    z-index: 4;
+}
+
+.leftmenu {
+    width: 20%;
+    line-height: 100px;
+    float: left;
+    /*	background-color: yellow;*/
+}
+
+.leftmenu h4 {
+    padding-left: 70px;
+    font-weight: bold;
+    color: orange;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.rightmenu {
+    width: 70%;
+    height: 100px;
+    float: right;
+    /*	background-color: red; */
+}
+
+.rightmenu ul {
+    float: right;
+    margin-right: 100px;
+}
+
+.rightmenu ul li {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    list-style: none;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    line-height: 100px;
+    margin-left: 40px;
+    text-transform: uppercase;
+}
+
+.rightmenu ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#fisrtlist {
+    color: orange;
+}
+
+.rightmenu ul li a:hover {
+    color: orange;
+    transition: 0.5s;
+}
+
+.text {
+    width: 100%;
+    margin-top: 185px;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.text h4 {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.text h1 {
+    font-size: 62px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700px;
+    margin: 14px 0px;
+    color: orange;
+}
+
+.text h3 {
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#buttonone {
+    background-color: orange;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 40px;
+    width: 150px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 25px;
+    border: 3px solid orange;
+    cursor: pointer;
+}
+
+#buttonone:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+.text a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+#buttontwo {
+    background-color: transparent;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 40px;
+    border: 3px solid orange;
+    width: 150px;
+    color: white;
+    cursor: pointer;
+}
+
+#buttontwo:hover {
+    color: orange;
+    transition: 0.5s;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 50px;
+    background-color: orange;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 8px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 3px solid transparent;
+}
+
+.button a {
+    color: white;
+    text-decoration: none;
+}
+
+.button:hover {
+    border: 3px solid orange;
+    background-color: transparent;
+}
+
+#form {
+    text-align: center;
+}
+
+.sort {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-image: url(tt.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 5;
+}
+
+#hamnav {
+    width: 100%;
+    background: black;
+    /* Optional */
+    display: none;
+}
+
+
+/* Hide Hamburger */
+
+#hamnav label,
+#hamburger {
+    display: none;
+}
+
+
+/* Horizontal Menu Items */
+
+#hamitems {
+    display: flex;
+}
+
+#hamitems a {
+    width: 20%;
+    /* 100% / 5 tabs = 20% */
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+#hamitems a:hover {
+    background: orange;
+}
+
+
+/* [ON SMALL SCREENS] */
+
+@media screen and (max-width: 768px) {
+    #hamnav {
+        display: block;
+        width: 100%;
+        float: right;
+        position: fixed;
+        z-index: 99998;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        overflow: auto;
+        background-color: #000000;
+        transition: 1s;
+        /* Enable scroll if needed */
+    }
+    /* Show Hamburger Icon */
+    #hamnav label {
+        display: inline-block;
+        color: white;
+        position: fixed;
+        background: orange;
+        font-style: normal;
+        font-size: 1.2em;
+        padding: 10px;
+        right: 0;
+        top: 0;
+        z-index: 99999;
+    }
+    /* Break down menu items into vertical */
+    #hamitems a {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+    }
+    /* Toggle Show/Hide Menu */
+    #hamitems {
+        display: none;
+    }
+    #hamnav input:checked~#hamitems {
+        display: block;
+    }
+    .rightmenu {
+        display: none;
+    }
+    .leftmenu {
+        display: flex;
+        justify-content: center;
+    }
+    .sort-content a {
+        padding: 5px;
+        font-size: 10px;
+    }
+    .search1 {
+        height: 60vh;
+    }
+    .sort {
+        height: 50vh;
+    }
+}
