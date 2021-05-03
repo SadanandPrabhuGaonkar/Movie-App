@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    width: 100%;
+    background-image: url(tt.jpg);
+    background-repeat: repeat;
+}
+
+.movie {
+    margin: 10px;
+    text-align: center;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.movie img {
+    width: 500px;
+    height: 700px;
+}
+
+.overview {
+    margin-bottom: 40px;
+}
+
+.movie-info h3 {
+    font-size: 50px;
+    text-transform: uppercase;
+    color: orange;
+    font-weight: bold;
+}
+
+.overview h3 {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.overview h5 {
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: #666666;
+}
+
+.overview h4 {
+    color: orange;
+    font-weight: bold;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    overflow: hidden;
+    background-color: black;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 50px;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 13px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 3px solid orange;
+    background-color: transparent;
+    margin-bottom: 20px;
+}
+
+.button:hover {
+    background-color: orange;
+    border: 3px solid transparent;
+    transition: 0.5s;
+}
+
+.button a {
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .movie img {
+        width: 300px;
+        height: 500px;
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="style1.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <title>Movie App</title>
+  <script>
+    function play(x) {
+      $("#vid").css('display', 'block');
+      $("#vids").attr('src', "https://www.youtube.com/embed/" + x+"?autoplay=1");
+      $(window).scrollTop(0, 0)
+    }
+  </script>
+</head>
+<header class="head" data-aos="slide-left">
+  <button class="button" style="vertical-align:middle">
+    <spann><a href=".\index.html">Back</a></span>
+  </button>
+</header>
+
+<body>
+  <div id="vid" onclick="$('#vid').css('display','none');$('#vids').attr('src','');"
+    style="text-align: center;margin: auto;position:absolute;top:0;bottom:0;left:0;right:0;background-color:rgba(0, 0, 0, 0.575);z-index: 2; display: none">
+    <iframe id="vids" width="90%" height="90%" src="" title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe></div>
+  <main id="main" data-aos="slide-left"></main>
+  <script src="getmov.js"></script>
+  <!-- <script src="script.js"></script> -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

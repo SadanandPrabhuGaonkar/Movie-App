@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Movie App</title>
+    <script>
+        x = 2;
+        $(window).scroll(function () {
+            if (!sessionStorage.getItem("load")) {
+                if ($(window).scrollTop() + $(window).height() > $(document).height() - 50) {
+                    getMoviessc(x);
+                    setTimeout(function () {
+                        x++;
+                    }, 30000);
+                }
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="bgimage" id="1">
+        <div class="menu">
+
+            <div class="leftmenu">
+                <h4 class="animate__animated animate__fadeInDown"> MOVIEAPP </h4>
+            </div>
+
+            <div class="rightmenu">
+                <ul>
+                    <li id="fisrtlist" class="animate__animated animate__fadeInDown"><a href="#1"> HOME </li>
+                    <li class="animate__animated animate__fadeInDown animate__delay-0.1s"><a href="#2"> Search </a>
+                    </li>
+                    <li class="animate__animated animate__fadeInDown animate__delay-0.2s"><a href="#3"> Sort</a></li>
+                    <li class="animate__animated animate__fadeInDown animate__delay-0.3s"> <a href="#main"> Movies</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="hamnav">
+                <!-- [THE HAMBURGER] -->
+                <label for="hamburger">&#9776;</label>
+                <input type="checkbox" id="hamburger" />
+
+                <!-- [MENU ITEMS] -->
+                <div id="hamitems" class="animate__animated animate__fadeInDown">
+                    <a href="#1">Home</a>
+                    <a href="#2">Search</a>
+                    <a href="#3">Sort</a>
+                    <a href="#main">Movies</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text">
+            <h4 class="animate__animated animate__backInDown animate__delay-1s">WELCOME TO THE WORLD OF</h4>
+            <h1 class="animate__animated animate__backInLeft animate__delay-2s"> THE MOVIE APP </h1>
+            <h3 class="animate__animated animate__backInRight animate__delay-3s"> Find ratings and reviews for the newest movie and TV shows. </h3>
+            <button id="buttonone" class="animate__animated animate__backInUp animate__delay-4s"> <a href="#2"> Search
+                </a></button>
+            <button id="buttontwo" class="animate__animated animate__backInUp animate__delay-4s"> <a href="#2"> Sort
+                </a></button>
+        </div>
+
+    </div>
+
+
+
+    <div class="search1" id="2">
+
+        <form id="form">
+            <h1 data-aos="slide-left">Find the Movie you want!</h1><br>
+            <input type="text" placeholder="Search" id="search" class="search" data-aos="slide-right"><button
+                class="button" onclick="scrollfunc()" data-aos="slide-right" style="vertical-align:middle"><a href="#main">
+                    <spann>Search</span>
+                </a></button>
+        </form><br>
+    </div>
+
+    <div class="sort" id="3">
+
+        <div class="sort-content">
+            <h1 data-aos="flip-down">Sort By:</h1>
+            <a href="#main1" onclick="clearBtn(1)" data-aos="zoom-in">Rating</a>
+            <a href="#main1" onclick="clearBtn(2)" data-aos="zoom-in">Release Date</a>
+            <a href="#main1" onclick="clearBtn(3)" data-aos="zoom-in">Title</a>
+            <a href="#main1" onclick="clearBtn(4)" data-aos="zoom-in">Popularity</a>
+        </div>
+    </div>
+
+
+    <main id="main">
+    </main>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
